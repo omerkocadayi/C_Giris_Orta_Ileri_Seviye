@@ -1,4 +1,4 @@
-/*  Eger A sayýsýnýn carpanlari toplami B sayisina ve
+/*      Eger A sayisinin carpanlari toplami B sayisina ve
 	B sayisinin carpanlari toplami A sayisina esit ise bu sayilara
 	arkadas sayi diyoruz.
 	
