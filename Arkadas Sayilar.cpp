@@ -21,7 +21,7 @@ int main(){
 		int atoplam = carpimlar_toplami(a);
 		for(b=2;b<a;b++){
 			if(atoplam==b && carpimlar_toplami(b)==a){
-				printf("Bu cift arkadas sayilardir : %6d  %6d \n",a,b);
+				printf("Bu cift arkadas sayilardir : %6d    %6d \n",a,b);
 			}
 		}
 	}
