@@ -18,9 +18,9 @@ int main(){
 	int a,b;
 	
 	for(a=2;a<max;a++){
-		int atoplam = carpimlar_toplami(a);
+		int atoplam = carpimlar_toplami(&a);
 		for(b=2;b<a;b++){
-			if(atoplam==b && carpimlar_toplami(b)==a){
+			if(atoplam==b && carpimlar_toplami(&b)==a){
 				printf("Bu cift arkadas sayilardir : %6d    %10d \n",a,b);
 			}
 		}
@@ -29,11 +29,11 @@ int main(){
 	
 }
 
-int carpimlar_toplami(int x){
+int carpimlar_toplami(int *x){
 	int i,result=1;
 	
-	for(i=2;i<=x/2;i++){
-		if(x%i==0){
+	for(i=2;i<=*x/2;i++){
+		if(*x%i==0){
 			result+=i;
 		}
 	}	
