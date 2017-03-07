@@ -12,7 +12,7 @@
 #include <stdio.h>
 #define max 1000000
 
-int carpimlar_toplami(int);
+int carpimlar_toplami(int *);
 
 int main(){
 	int a,b;
