@@ -26,6 +26,8 @@ int main(){
 	for(int i=0;i<9;i++){
 		printf("%x\t\t%d\n",sonuc+i,*(sonuc+i));
 	}
+	
+	free(sonuc);
 	return 0;
 }
 int *birlestir(int a[], int n1, int b[], int n2){
