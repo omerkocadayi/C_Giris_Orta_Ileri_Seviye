@@ -1,4 +1,4 @@
-// Toplam eleman sayısını kullanıcıdan al. bu sayı kadar bellekten calloc ile yer al. elemanları gir. bu degerler icinde en buyuk olanı yazdır.
+// Toplam eleman sayÄ±sÄ±nÄ± kullanÄ±cÄ±dan al. bu sayÄ± kadar bellekten calloc ile yer al. elemanlarÄ± gir. bu degerler icinde en buyuk olanÄ± yazdÄ±r.
 // (pointer kullanarak)
 
 #include <stdio.h>
@@ -17,6 +17,8 @@ int main(){
 	}
 	
 	printf("Dizinin en buyuk degeri : %d",buyuk_bul(ptr,n));
+	
+	free(ptr);
 	return 0;
 }
 
