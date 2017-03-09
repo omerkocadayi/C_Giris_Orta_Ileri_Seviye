@@ -2,7 +2,7 @@
 
 int tersini_al(int);
 
-int main(void){
+int main(){
 	int sayi,tersi;
 	printf("Sayinizi giriniz : "); scanf("%d",&sayi);
 	tersi=tersini_al(sayi);
