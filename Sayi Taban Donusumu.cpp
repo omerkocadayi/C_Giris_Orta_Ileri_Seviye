@@ -1,4 +1,5 @@
 // Sayi Taban Donusum
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -14,21 +15,16 @@ int main(){
  	printf("\n\t8'lik taban icin ==> 2'ye bas");
  	printf("\n\t16'lik taban icin ==> 3'e bas");
  	
- 	
  	printf("\n\n\n\tHANGI TABANA DONUSUM YAPMAK ISTIYORSUN :"); scanf("%d", &secim);
  	
  	if(secim==1){
  		ikilik_taban(sayi);
-	}
 	
 	else if(secim==2){
  		sekizlik_taban(sayi);
-	}
 	
 	else if(secim==3){
-		printf("\n\n\t* Sayinizin 16'lik tabanda karsiligi  :  ");
- 		printf("%x", sayi);
-	}
+		printf("\n\n\t* Sayinizin 16'lik tabanda karsiligi  : %x", sayi);
 	
 	else
 		printf("\n\t!!!!  HATALI GIRIS YAPTINIZ  !!!!");
@@ -55,6 +51,8 @@ void ikilik_taban(unsigned x){
 		printf("%d",*(p+k));
 	}
 }
+		
+		
 void sekizlik_taban(unsigned x){
 	int i=1,k;
 	unsigned *p=&x;
