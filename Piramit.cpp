@@ -1,13 +1,12 @@
 #include <stdio.h>
-#include <string.h>
 
 int main(){
-	int h,u;
-	printf("piramit icin yukseklik gir : "); scanf("%d",&u);
+	int h;
+	printf("piramit icin yukseklik gir : "); scanf("%d",&h);
 	
-	for(int i=1;i<=u;i++){
+	for(int i=1;i<=h;i++){
 		
-		for(int j=1;j<=u-i;j++)
+		for(int j=1;j<=h-i;j++)
 			printf(" ");
 		for(int k=1;k<i*2;k++)
 			printf("*");
