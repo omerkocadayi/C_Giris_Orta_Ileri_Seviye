@@ -1,5 +1,8 @@
+// vucut kitle indeksi ==> Kilo / Boyun Karesi     seklinde hesaplanir.
+
 #include <stdio.h>
 float indeks(float,float);
+
 int main(){
 	float boy,kilo,kitleindeks;
 	printf("boy giriniz : "); scanf("%f",&boy);
@@ -7,18 +10,17 @@ int main(){
 	
 	kitleindeks=indeks(boy,kilo);
 	
-	if(kitleindeks==1){
+	if(kitleindeks==1)
 		printf("Zayif");
-	}
-	else if(kitleindeks==2){
+	
+	else if(kitleindeks==2)
 		printf("Normal");
-	}
-	else if(kitleindeks==3){
+	
+	else if(kitleindeks==3)
 		printf("Kilolu");
-	}
-	else if(kitleindeks==4){
+	
+	else if(kitleindeks==4)
 		printf("Obez");
-	}
 }
 
 float indeks(float boy,float kilo){
@@ -28,13 +30,13 @@ float indeks(float boy,float kilo){
 	
 	if(sonuc<=10){
 		sonuc=1;
-	}
+
 	else if(sonuc<=20){
 		sonuc=2;
-	}	
+	
 	else if(sonuc<=30){
 		sonuc=3;
-	}
+
 	else
 		sonuc=4;
 	
