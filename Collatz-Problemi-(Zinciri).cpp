@@ -1,4 +1,4 @@
-/* n -->  n/2 (çift)
+/* n -->  n/2 (Ã§ift)
    n -->  3n+1 (tek)
    Yukaridaki kurali uygulayarak ve 13'ten baslayarak asagidaki diziyi uretiriz..
    13 - 40 - 20 - 10 - 5 - 16 - 8 - 4 - 2 - 1
