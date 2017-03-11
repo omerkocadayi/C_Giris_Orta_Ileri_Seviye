@@ -1,3 +1,5 @@
+// kelime sayisini bulmak icin; kelimeler arasindaki bosluklarin sayisini bulup +1 yapmamiz gerekir.
+
 #include <stdio.h>
 #include <string.h>
 
