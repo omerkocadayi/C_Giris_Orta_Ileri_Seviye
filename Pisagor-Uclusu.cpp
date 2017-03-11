@@ -21,10 +21,9 @@ int main(){
 				c2=c*c;
 				
 				if(a<b && b<c && (a+b+c)==1000 && c2==a2+b2){
-					printf("\n\nToplamlari 1000 yapan pisagor uclusu : %d,%d,%d",a,b,c);
-				   	printf("\na^2 + b^2 = c^2  ==> %d + %d = %d",a2,b2,c2);
-					printf("\nCarpimlari (a*b*c) ==> %d * %d = %d",a,b,(a*b*c));
-					printf("\n\n");
+					printf("\n\n   Toplamlari 1000 yapan pisagor uclusu : %d,%d,%d",a,b,c);
+				   	printf("\n   a^2 + b^2 = c^2  ==> %d + %d = %d",a2,b2,c2);
+					printf("\n   Carpimlari (a*b*c) ==> %d * %d = %d",a,b,(a*b*c));
 					return 0;
 				}
 			}
