@@ -1,5 +1,5 @@
-//   bi sayı gir. girilen sayının karesini void fonksiyonda al ve aynı adrese ata. 
-//   void fonksiyon geri dönüş değeri olmayan fonksiyonlardır.
+//   bi sayi gir. girilen sayÄ±nÄ±n karesini void fonksiyonda al ve aynÄ± adrese ata. 
+//   void fonksiyon geri dÃ¶nÃ¼ÅŸ deÄŸeri olmayan fonksiyonlardÄ±r.
 
 #include <stdio.h>
 
