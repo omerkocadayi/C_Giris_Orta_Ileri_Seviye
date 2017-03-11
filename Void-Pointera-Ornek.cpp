@@ -12,7 +12,7 @@ int main(){
 	printf("a = %d\n\n", a);
 	
 	
-   p=&b;
+   	p=&b;
 	printf("b = %.2f\n", *(double*)p);
 	*(double*)p = 8.5;
 	printf("b = %.2f\n\n", b);
