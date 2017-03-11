@@ -22,7 +22,7 @@ int tersini_al(int sayi){
 	                sayi=sayi/10;			
 		}
 		else
-	    	break;		
+	    		break;		
 	}
 	
 	return toplam;
