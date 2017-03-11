@@ -1,4 +1,4 @@
-// Sayi Taban Donusum
+// Decimal tabandan binary(2'lik) - octal(8'lik) ve hexadecimal(16'lik) tabana donusum
 
 #include <stdio.h>
 #include <stdlib.h>
