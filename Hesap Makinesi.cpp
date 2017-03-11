@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <conio.h>
 #include <math.h>
 
 int main(){
 	float x,y;
 	int secim;
+	
 	printf("islem yapmak istediginiz 1. sayiyi giriniz (x): "); scanf("%f",&x);
 	printf("islem yapmak istediginiz 2. sayiyi giriniz (y): "); scanf("%f",&y);
 	
@@ -36,7 +36,6 @@ int main(){
 			printf("\n\n!!! HATALI GIRIS YAPILDI !!!\a\a");
 			break;		
 	}
-	
 	
 	return 0;
 }
