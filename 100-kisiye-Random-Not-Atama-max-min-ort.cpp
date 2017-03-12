@@ -1,4 +1,4 @@
-//      100 Ögrenciye random not veriyoruz. en düşük, en büyük ve ortalama buluyoruz.
+//      100 Ögrenciye random not veriyoruz. en düşük, en büyük ve ortalama buluyoruz..
 
 #include <stdio.h>
 #include <stdlib.h>
