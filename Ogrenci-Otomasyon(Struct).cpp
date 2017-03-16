@@ -22,7 +22,7 @@ void ogrenci_goster(int);
 
 
 int main(){
-	int secim,sayac=0;
+	int secim;
 	
 	while(1){
 		if(kayitsayaci > 0){
@@ -109,9 +109,9 @@ void kayit_listele(){
 	else
 		printf("%d numarali ogrenci bulunamadi..",no);
 	
-   printf("\n\nBir tusa basana kadar ekranda kalacaktir..   ");
-	getch();
 	
+  	printf("\n\nBir tusa basana kadar ekranda kalacaktir..   ");
+	getch();
 }
 
 
@@ -166,6 +166,7 @@ void enbasarili(){
 	int secim,i;
 	float max=0.0;
 	ogr ogr1;
+	
 	printf("\nVize Basarisi icin ==> 1");
 	printf("\nFinal Basarisi icin ==> 2");
 	printf("\nAgirlikli Ort. Basarisi icin ==> 3");
@@ -256,4 +257,3 @@ void ogrenci_goster(int no){
 		}
 	}
 }
-
