@@ -30,9 +30,10 @@ int main() {
 	while (1) {
 		system("cls");
 		
-		if (kayitsayisi > 0)
+		if (kayitsayisi > 0){
 			printf("\n*** ISLEM TAMAMLANDI ***\n\n");
-
+		}
+		
 		printf("Yeni isci kaydi icin           ==> 1'e bas\nKayitlari listelemek icin      ==> 2'ye bas\n");
 		printf("Kayit guncellemek icin         ==> 3'e bas\nCikmak icin                    ==> 4'e bas");
 		printf("\n\nSecimini Yap : "); scanf("%d", &secim);
@@ -65,10 +66,13 @@ void yeni_kayit() {
 	system("cls");
 	isci isci1;
 
-	if (kayitsayisi == 0)
+	if (kayitsayisi == 0){
 		ptr = (isci *)malloc(sizeof(isci));
-	else
+	}
+	
+	else{
 		ptr = (isci *)realloc(ptr, (kayitsayisi+1) * sizeof(isci));
+	}
 
 	if (ptr != NULL) {
 		printf("Ad giriniz : "); scanf("%s", isci1.isim);
@@ -82,11 +86,9 @@ void yeni_kayit() {
 		*(ptr+kayitsayisi) = isci1;
 		kayitsayisi++;
 	}
+	
 	else
 		printf("\n*** Yeterli Hafiza Bulunamadi ***\n");
-		
-	
-
 }
 
 
@@ -123,9 +125,10 @@ void kayit_listele() {
 			}
 		}
 
-		if (bulundu == 0)
+		if (bulundu == 0){
 			printf("\n*** Sicil no bulunamadi ***");
-
+		}
+		
 	}
 
 	else
