@@ -94,7 +94,7 @@ void kayit_listele() {
 	int i,no,secim,bulundu=0;
 	isci isci1;
 	system("cls");
-	printf("Tumunu Listele ==> 1'e bas\nSicile Göre Listele ==> 2'ye bas\n");
+	printf("Tumunu Listele ==> 1'e bas\nSicile GÃ¶re Listele ==> 2'ye bas\n");
 	printf("\nSecimini yap : "); scanf("%d", &secim);
 	system("cls");
 
