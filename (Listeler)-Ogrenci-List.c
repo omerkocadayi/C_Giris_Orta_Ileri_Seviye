@@ -14,14 +14,14 @@ typedef struct ogrenci ogrenci;
 int kayitsayaci=0;
 
 
-ogrenci* liste_olustur();                    // case 1
-void liste_dolas(ogrenci *);						// case 2
+ogrenci* liste_olustur();                   			// case 1
+void liste_dolas(ogrenci *);					// case 2
 ogrenci* dugum_ekle(ogrenci *);					// case 3
 ogrenci* dugum_sil(ogrenci *);					// case 4
 void ogrenci_guncelle(ogrenci *);				// case 5
 ogrenci* kayit_ekle(ogrenci *);					// case 6
 void sinif_ortalamasi(ogrenci *);				// case 7
-void en_basarili(ogrenci *);						// case 8
+void en_basarili(ogrenci *);					// case 8
 
 
 int main(){
@@ -128,7 +128,6 @@ ogrenci * liste_olustur(){
 
 
 void liste_dolas(ogrenci *h){
-	
 	ogrenci *ptr;
 	ptr = h;
 	
@@ -215,7 +214,7 @@ ogrenci* dugum_sil(ogrenci *h){
 		}
 		
 		else if(p->next == NULL){
-			printf("\n*** ARADIGINIZ OGRENCÝ NO BULUNAMADI ***\n");
+			printf("\n*** ARADIGINIZ OGRENCÄ° NO BULUNAMADI ***\n");
 		}
 	}
 	
@@ -227,6 +226,7 @@ void ogrenci_guncelle(ogrenci *h) {
 	ogrenci *p;
 	int no;
 	p = h;	
+	
 	printf("\nGuncellenecek ogrencinin numarasini gir : "); scanf("%d", &no);
 
 	while (p != NULL) {
@@ -242,7 +242,7 @@ void ogrenci_guncelle(ogrenci *h) {
 	}
 
 	if(p == NULL)
-		printf("\n*** ARADIGINIZ OGRENCÝ NO BULUNAMADI ***\n");
+		printf("\n*** ARADIGINIZ OGRENCÄ° NO BULUNAMADI ***\n");
 
 }
 
