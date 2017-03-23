@@ -14,12 +14,12 @@ typedef struct ogrenci ogrenci;
 int kayitsayaci=0;
 
 
-ogrenci* liste_olustur();                   			// case 1
+ogrenci* liste_olustur();      		       			// case 1
 void liste_dolas(ogrenci *);					// case 2
 ogrenci* dugum_ekle(ogrenci *);					// case 3
-ogrenci* dugum_sil(ogrenci *);					// case 4
+ogrenci* kayit_ekle(ogrenci *);					// case 4
 void ogrenci_guncelle(ogrenci *);				// case 5
-ogrenci* kayit_ekle(ogrenci *);					// case 6
+ogrenci* dugum_sil(ogrenci *);					// case 6
 void sinif_ortalamasi(ogrenci *);				// case 7
 void en_basarili(ogrenci *);					// case 8
 
@@ -186,36 +186,31 @@ ogrenci* dugum_ekle(ogrenci *h){
 }
 
 
-ogrenci* dugum_sil(ogrenci *h){
-	ogrenci *p, *q;
-	int no;
+ogrenci* kayit_ekle(ogrenci *h){
+	ogrenci *p, *yeni;
 	
-	printf("Hangi kaydi silmek istiyorsun ?");
-	printf("\n\nOgrenci no gir : "); scanf("%d",&no);
+	yeni = (ogrenci *) malloc(sizeof(ogrenci));
+
+	printf("\n\nIsim gir : "); scanf("%s",yeni->ad);
+	printf("No gir : "); scanf("%d",&yeni->no);
+	printf("Vize gir : "); scanf("%d",&yeni->vize);
+	printf("Final gir : "); scanf("%d",&yeni->final);
 	
+	kayitsayaci++;
 	p = h;
-	
-	if(p->no == no){   // Bastakini silme
-		h = p->next;
-		kayitsayaci--;
-		free(p);
+		
+	if(p == NULL){
+		h = yeni;		
+		yeni->next = NULL;
 	}
 	
 	else{
-		while(p->no != no && p->next != NULL){   // Dugumler arasi dolasma
-			q = p;
+		while(p->next != NULL){
 			p = p->next;
 		}
 		
-		if(p->no == no){   // Aradan ve sondan silme
-			q->next = p->next;
-			kayitsayaci--;
-			free(p);
-		}
-		
-		else if(p->next == NULL){
-			printf("\n*** ARADIGINIZ OGRENCİ NO BULUNAMADI ***\n");
-		}
+		p->next = yeni;
+		yeni->next = NULL;
 	}
 	
 	return h;
@@ -247,31 +242,36 @@ void ogrenci_guncelle(ogrenci *h) {
 }
 
 
-ogrenci* kayit_ekle(ogrenci *h){
-	ogrenci *p, *yeni;
+ogrenci* dugum_sil(ogrenci *h){
+	ogrenci *p, *q;
+	int no;
 	
-	yeni = (ogrenci *) malloc(sizeof(ogrenci));
-
-	printf("\n\nIsim gir : "); scanf("%s",yeni->ad);
-	printf("No gir : "); scanf("%d",&yeni->no);
-	printf("Vize gir : "); scanf("%d",&yeni->vize);
-	printf("Final gir : "); scanf("%d",&yeni->final);
+	printf("Hangi kaydi silmek istiyorsun ?");
+	printf("\n\nOgrenci no gir : "); scanf("%d",&no);
 	
-	kayitsayaci++;
 	p = h;
-		
-	if(p == NULL){
-		h = yeni;		
-		yeni->next = NULL;
+	
+	if(p->no == no){   // Bastakini silme
+		h = p->next;
+		kayitsayaci--;
+		free(p);
 	}
 	
 	else{
-		while(p->next != NULL){
+		while(p->no != no && p->next != NULL){   // Dugumler arasi dolasma
+			q = p;
 			p = p->next;
 		}
 		
-		p->next = yeni;
-		yeni->next = NULL;
+		if(p->no == no){   // Aradan ve sondan silme
+			q->next = p->next;
+			kayitsayaci--;
+			free(p);
+		}
+		
+		else if(p->next == NULL){
+			printf("\n*** ARADIGINIZ OGRENCİ NO BULUNAMADI ***\n");
+		}
 	}
 	
 	return h;
