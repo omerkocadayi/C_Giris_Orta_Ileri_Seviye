@@ -16,6 +16,10 @@ struct student{
 
 typedef struct student node;
 
+node* create_list();
+node * cut_last_add_head(node *);
+node * delete_node(node *,int);
+void liste_dolas(node *);
 
 int main(void){
 	node *head;
