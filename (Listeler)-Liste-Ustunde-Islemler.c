@@ -1,5 +1,5 @@
 /*
- Ilk olarak liste olusturuyoruz.
+ Bu programimizda ilk olarak bir liste olusturalim.
  cut_last_add_head	fonksiyonunda listenin son dugumunu en basa getiriyoruz.
  delete_node	 fonksiyonunda eger YAS degeri birbirine esit olan kisiler varsa, ilk kisiyi tutup sonra gelenleri siliyoruz.
 */
