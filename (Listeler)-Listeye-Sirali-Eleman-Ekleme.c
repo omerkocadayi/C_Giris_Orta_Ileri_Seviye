@@ -1,5 +1,5 @@
 /*
- Ek bir fonksiyon kullanmadan listeye ekledigimiz her eleman,
+ Bu kodumuzda ek bir fonksiyon kullanmadan listeye ekledigimiz her eleman,
  BOY siralamasina gore yerini bulup oraya yerlesecek.
 */
 
