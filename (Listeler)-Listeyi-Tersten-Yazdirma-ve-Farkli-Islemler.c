@@ -16,7 +16,7 @@ node *head;
 node* create_list();
 void print_list(node *);
 void print_reverse(node *);
-node *add_head_for_reverse(node *);
+node* add_head_for_reverse(node *);
 node* add_node(node *);
 node* delete_node(node *);
 
@@ -88,7 +88,7 @@ node* create_list(){
 		
 	}
 	
-	iter->next = NULL;	
+	iter->next = NULL;
 	return root;
 }
 
@@ -138,16 +138,16 @@ node *add_head_for_reverse(node * new_root){
 	while(iter != NULL){
 		if(i==0){
 			new_root = (node *) malloc(sizeof(node));   // ilk olarak yeni listemize yer aldik.
-			*new_root = *head;								  // ana listemizin ilk elemaninin datasini yeni listenin ilk eleman datasina kopyaladik.
+			*new_root = *head;			    // ana listemizin ilk elemaninin datasini yeni listenin ilk eleman datasina kopyaladik.
 			new_root->next = NULL;
 			i++;
 		}
 		
 		else{
-			temp = (node *) malloc(sizeof(node)); 		  // ana listemizin sonraki elemanlarini tek tek tutmasi icin temp'e yer al˝yoruz.
-			*temp = *iter;										  // ana listemizin sonraki elemanlarinin datasini tempe kopyaliyoruz.
-			temp->next = new_root;							  // temp'in nexti listenin basini gostersin diyoruz.
-			new_root = temp;									  // ve son olarak listenin basini tutan new_root degiskenine. artik temp'i goster diyoruz.
+			temp = (node *) malloc(sizeof(node)); 		  // ana listemizin sonraki elemanlarini tek tek tutmasi icin temp'e yer al√Ωyoruz.
+			*temp = *iter;					  // ana listemizin sonraki elemanlarinin datasini tempe kopyaliyoruz.
+			temp->next = new_root;				  // temp'in nexti listenin basini gostersin diyoruz.
+			new_root = temp;				  // ve son olarak listenin basini tutan new_root degiskenine. artik temp'i goster diyoruz.
 		}	
 
 		iter = iter->next;
@@ -229,7 +229,7 @@ node* delete_node(node *root){
 		}
 		
 		else if(iter->next == NULL){
-			printf("\n*** ARADIGINIZ OGRENC› NO BULUNAMADI ***\n");
+			printf("\n*** ARADIGINIZ OGRENC√ù NO BULUNAMADI ***\n");
 		}
 	}
 	
