@@ -12,7 +12,7 @@ int main(){
 	
 	bubble_sort(sayilar,i);
 	
-	printf("Dizinin sirali hali \n");
+	printf("\nDizinin sirali hali \n");
 	
 	for(k=0; k<i; k++){
 		printf("%d\t",sayilar[k]);
