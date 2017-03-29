@@ -29,20 +29,20 @@ int main(void){
 		printf("\n1.Liste Olustur\n2.Sondakini Kesip Basa At\n3.Dugum sil\n4.Cikis\n");
 		printf("Secim [1-4]?"); scanf("%d",&secim);
 	
-		switch(selection){
+		switch(secim){
 			case 1:
 				head = create_list();
 				break;
 		
 			case 2:
 				head = cut_last_add_head(head);
-				liste_dolas(root);
+				liste_dolas(head);
 				break;
 		
 			case 3: 
 				printf("yas gir : "); scanf("%d",&sayi);
 				head = delete_node(head,sayi);
-				liste_dolas(root);
+				liste_dolas(head);
 				break;				
 		
 			case 4:
