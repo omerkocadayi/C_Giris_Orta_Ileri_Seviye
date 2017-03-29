@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 void bubble_sort(int [], int);
 
 int main(){
@@ -13,7 +12,6 @@ int main(){
 	
 	bubble_sort(sayilar,i);
 	
-		
 	printf("Dizinin sirali hali \n");
 	
 	for(k=0; k<i; k++){
