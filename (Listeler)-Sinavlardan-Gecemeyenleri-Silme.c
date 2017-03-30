@@ -31,9 +31,9 @@ int main(){
 	while(1){
 		printf("\nDevam etmek icin bir tusa bas..");
 		getch();
+		system("cls");
 		
 		if(kayit_sayisi > 0){
-			system("cls");
 			printf("\n*** ISLEM  TAMAMLANDI ***\n");
 		}
 		printf("\n1 ==> Liste Olustur\n2 ==> Ogrenci Ekle\n3 ==> Ogrenci Sil");
