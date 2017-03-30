@@ -34,7 +34,7 @@ int main(){
 		
 		if(kayit_sayisi > 0){
 			system("cls");
-			printf("\n*** ISLEM TAMAMLANDI ***\n");
+			printf("\n*** ISLEM  TAMAMLANDI ***\n");
 		}
 		printf("\n1 ==> Liste Olustur\n2 ==> Ogrenci Ekle\n3 ==> Ogrenci Sil");
 		printf("\n4 ==> Ortalamalari Hesapla\n5 ==> Gecemeyenleri Sil\n6 ==> Listeyi Gor\n7 ==> Cikis\n");
@@ -176,7 +176,7 @@ node *delete_node(node *root){
 		}
 		
 		else{
-			printf("\n*** OGRENC› NO BULUNAMADI ***");
+			printf("\n*** OGRENC√ù NO BULUNAMADI ***");
 		}
 	}
 	
