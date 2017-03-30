@@ -26,7 +26,7 @@ int main(void){
 	int secim,sayi;	
 	
 	while(1){	
-		printf("\n1.Liste Olustur\n2.Sondakini Kesip Basa At\n3.Dugum sil\n4.Cikis\n");
+		printf("\n1.Liste Olustur\n2.Sondakini Kesip Basa At\n3.Ayni yasa sahipleri sil\n4.Cikis\n");
 		printf("Secim [1-4]?"); scanf("%d",&secim);
 	
 		switch(secim){
