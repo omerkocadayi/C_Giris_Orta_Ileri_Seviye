@@ -3,8 +3,7 @@
 
 int kelimesayisi(char[]);
 
-int main()
-{
+int main(){
 	int sayi;
 	char cumle[100];
 	puts("Cumlenizi giriniz : "); gets(cumle);
@@ -15,18 +14,16 @@ int main()
 	return 0;
 }
 
-int kelimesayisi(char cumle[])
-{	int i;
+int kelimesayisi(char cumle[]){
+	int i;
 	int uzunluk,sayac=0;
 	uzunluk=strlen(cumle);
 	
-    for(i=0;i<uzunluk;i++){
-    	
+    	for(i=0;i<uzunluk;i++){
 		if(cumle[i]==' '){
 			sayac++;
 		}
-		
 	}
+	
 	return (sayac+1);
 }
-
