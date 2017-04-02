@@ -16,16 +16,17 @@ int main(){
 char *sirala(char *ptr){
 	char gecici;
 	
-  for(int i=0;i<strlen(ptr);i++){
+	for(int i=0;i<strlen(ptr);i++){
+
+		for(int j=0;j<strlen(ptr);j++){
 		
-    for(int j=0;j<strlen(ptr);j++){
-		
-    if(*(ptr+i)<*(ptr+j)){
+			if(*(ptr+i)<*(ptr+j)){
 				gecici=*(ptr+j);
 				*(ptr+j)=*(ptr+i);
 				*(ptr+i)=gecici;
 			}
 		}
 	}
+	
 	return ptr;
 }
