@@ -41,6 +41,7 @@ int main(){
 		
 		if(secim==0)
 			break;
+		
 		if(secim!=1){
 			printf("HATALI GİRİS !!\a\a");
 			break;
