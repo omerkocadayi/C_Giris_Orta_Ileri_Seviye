@@ -2,7 +2,7 @@
 Pisagor Uclusu a<b<c ve  a^2 + b^2 = c^2 olarak tanimlanabilir.
 Ornegin ==>  3^2 + 4^2 = 9+16 = 25 = 5^2
 a+b+c = 1000 sonucunu veren, yukaridaki kurala uyan yalnizca 1 adet pisagor uclusu vardir.
-Bu uclu için a*b*c kactir ?
+Bu uclu iÃ§in a*b*c kactir ?
 */
 
 #include <stdio.h>
