@@ -30,7 +30,9 @@ int main(){
 
 int max_hesap(int notlar[100]){
 	int max_not=0;
+	
 	for(int i=0;i<100;i++){
+	
 		if(notlar[i]>max_not){
 			max_not=notlar[i];
 		}
