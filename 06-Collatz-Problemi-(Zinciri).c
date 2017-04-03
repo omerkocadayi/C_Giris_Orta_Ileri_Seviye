@@ -19,6 +19,7 @@ int main(){
 			gecici= gecici/2;
 			printf("%d   ",gecici);
 		}
+		
 		else{
 			gecici= (3*gecici)+1;
 			printf("%d   ",gecici);
