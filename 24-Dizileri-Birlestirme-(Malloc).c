@@ -27,9 +27,10 @@ int main(){
 		printf("%x\t\t%d\n",sonuc+i,*(sonuc+i));
 	}
 	
-	free(sonuc);
 	return 0;
 }
+
+
 int *birlestir(int a[], int n1, int b[], int n2){
 	int *p,i,j;
 	p=(int *) malloc((n1+n2)*sizeof(int));
