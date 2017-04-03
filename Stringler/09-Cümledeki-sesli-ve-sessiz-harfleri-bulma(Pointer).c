@@ -3,6 +3,7 @@
 #include <string.h>
 
 char sesli_bul(char*,char*);
+
 int main(){
 	char cumle[100];
 	char sesli[5]={'a','e','i','o','u'};
@@ -26,15 +27,19 @@ int main(){
 	
 	return 0;
 }
+
 char sesli_bul(char *ptr_cumle,char *ptr_sesli){
 	int sayac=0;
 	
 	for(int i=0;i<strlen(ptr_cumle);i++){
+
 		for(int j=0;j<5;j++){
+		
 			if(*(ptr_cumle+i)==*(ptr_sesli+j)){
 				sayac++;
 			}
 		}
 	}
+	
 	return sayac;
 }
