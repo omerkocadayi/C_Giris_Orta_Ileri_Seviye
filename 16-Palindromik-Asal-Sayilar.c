@@ -31,9 +31,11 @@ int tersini_al(int sayi){
 	      		toplam=((toplam*10)+gecici);
 	      		sayi=sayi/10;			
 		}
+		
 		else
 	    		break;		
 	}
+	
 	return toplam;
 }
 
