@@ -17,13 +17,13 @@ int main(){
  	
  	printf("\n\n\n\tHANGI TABANA DONUSUM YAPMAK ISTIYORSUN :"); scanf("%d", &secim);
  	
- 	if(secim==1){
+ 	if(secim==1)
  		ikilik_taban(sayi);
 	
-	else if(secim==2){
+	else if(secim==2)
  		sekizlik_taban(sayi);
 	
-	else if(secim==3){
+	else if(secim==3)
 		printf("\n\n\t* Sayinizin 16'lik tabanda karsiligi  : %x", sayi);
 	
 	else
@@ -46,7 +46,9 @@ void ikilik_taban(unsigned x){
 		}
 		i++;
 	}
+	
 	printf("\n\n\t* Sayinizin 2'lik tabanda karsiligi  :  ");
+	
 	for(k=i+1;k>0;k--){
 		printf("%d",*(p+k));
 	}
@@ -65,9 +67,11 @@ void sekizlik_taban(unsigned x){
 			*(p+i+1)=x;
 			break;
 		}
+	
 		i++;
 	}
 	printf("\n\n\t* Sayinizin 8'lik tabanda karsiligi  :  ");
+	
 	for(k=i+1;k>0;k--){
 		printf("%d",*(p+k));
 	}
