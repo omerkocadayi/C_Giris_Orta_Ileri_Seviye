@@ -1,12 +1,15 @@
 // vucut kitle indeksi ==> Kilo / Boyun Karesi     seklinde hesaplanir.
-
 #include <stdio.h>
-float indeks(float,float);
+
+int indeks(float, int);
 
 int main(){
-	float boy,kilo,kitleindeks;
+	float boy;
+	int kilo, kitleindeks;
+
 	printf("boy giriniz : "); scanf("%f",&boy);
-	printf("kilo giriniz : "); scanf("%f",&kilo);
+	printf("kilo giriniz : "); scanf("%d",&kilo);
+	boy = boy/100;  //metre cinsine cevirmek icin
 	
 	kitleindeks=indeks(boy,kilo);
 	
@@ -23,22 +26,20 @@ int main(){
 		printf("Obez");
 }
 
-float indeks(float boy,float kilo){
+int indeks(float boy, int kilo){
 	float sonuc;
 	boy=boy*boy;
 	sonuc=kilo/boy;
 	
-	if(sonuc<=10){
-		sonuc=1;
+	if(sonuc<=18)
+		return 1;
 
-	else if(sonuc<=20){
-		sonuc=2;
+	else if(sonuc<=25)
+		return 2;
 	
-	else if(sonuc<=30){
-		sonuc=3;
+	else if(sonuc<=30)
+		return 3;
 
 	else
-		sonuc=4;
-	
-	return sonuc;
+		return 4;
 }
