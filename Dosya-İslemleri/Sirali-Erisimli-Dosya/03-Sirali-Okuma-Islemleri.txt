@@ -1,0 +1,7 @@
+1 Ali 149.6
+2 Ceren -60.25
+3 Mirac 0.0
+4 Zeynep 358.4
+5 Omer -35.1
+6 Mehmet 90.0
+7 Busra 0.0
