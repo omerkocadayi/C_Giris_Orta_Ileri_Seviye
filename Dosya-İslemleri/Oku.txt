@@ -1,0 +1,2 @@
+Klasorler icerisinde her ornegin altinda, o ornekle ilgili metin bilgisi bulunmaktadir.
+Ornekleri metin belgesiyle beraber inceleyebilirsiniz.
