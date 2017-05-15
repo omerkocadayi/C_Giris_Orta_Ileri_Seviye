@@ -1,5 +1,5 @@
-Klasorler icerisinde her ornegin altinda, o ornekle ilgili metin bilgisi bulunmaktadir.
+Sirali Erisimli Dosyalar klasoru icerisinde her ornegin altinda, o ornekle ilgili metin bilgisi bulunmaktadir.
 Ornekleri metin belgesiyle beraber inceleyebilirsiniz.
 
-Rastgele Erisimli Dosya klasorundeki tum ornekleri ayni metin dosyasi uzerinden yaptim.
+Rastgele Erisimli Dosyalar klasorundeki tum ornekleri ayni metin dosyasi uzerinden yaptim.
 Adim adim neler gerceklestigini gormek icin kendiniz sirayla inceleyiniz.
