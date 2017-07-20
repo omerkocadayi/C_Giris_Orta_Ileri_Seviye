@@ -1,5 +1,6 @@
 #include <stdio.h>
- 
+#include <stdlib.h>
+
 #define STACK_SIZE 20
  
 typedef struct{
@@ -42,7 +43,7 @@ int main(){
     initialization(&stk);
     FILE *fptr;
  
-	if( (fptr = fopen("05 - kontrol.txt","r")) == NULL){
+	if( (fptr = fopen("02 - kontrol.txt","r")) == NULL){
     	printf("Boyle bir dosya yok\n");
     	return 0;
 	}
