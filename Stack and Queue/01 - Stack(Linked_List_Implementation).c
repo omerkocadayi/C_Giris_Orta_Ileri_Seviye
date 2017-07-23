@@ -43,7 +43,8 @@ int pop(stack *stk){
 		return -1000;
 	}
 	node *temp = stk->top;
-	int x = temp->data;
+	int x;
+	x = temp->data;
 	stk->top = stk->top->next;
 	free(temp);
 	stk->counter--;
@@ -56,7 +57,7 @@ int main(){
 	reset(&stk);
 	
 	while(1){
-		printf("Push ==> 1\nPop ==> 2\nReset ==> 3\n");
+		printf("Push ==> 1\nPop ==> 2\n");
 		printf("\n\nMake Your Choice : "); scanf("%d",&secim);
 		
 		switch(secim){
@@ -67,13 +68,9 @@ int main(){
 			
 			case 2:
 				deleted = pop(&stk);
-				printf("This data has been deleted : %d",deleted);
+				printf("This data has been deleted : %d\n",deleted);
 				break;
 				
-			case 3:
-				reset(&stk);
-				break;
-			
 			default:
 				printf("Uncorrect entry !!");
 				break;
