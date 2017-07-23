@@ -53,7 +53,7 @@ int pop(stack *stk){
 int main(){
 	int secim,deleted,c;
 	stack stk;
-	stk.counter = 0;
+	reset(&stk);
 	
 	while(1){
 		printf("Push ==> 1\nPop ==> 2\nReset ==> 3\n");
@@ -79,4 +79,5 @@ int main(){
 				break;
 		}
 	}	
+	return 0;
 }
