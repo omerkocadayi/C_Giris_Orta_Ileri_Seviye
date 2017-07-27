@@ -1,17 +1,9 @@
 //main icerisinde ilk once find_min sonra add fonksiyonunu cagiriyoruz
 
 int find_min(BTREE *root){
-	if(root != NULL){
-		int min = root->data;
-		while(root != NULL){
-			if(root->data < min)
-				min = root->data;
-			root = root->left;
-		}
-		return min;
-	}
-	else
-		return -1000;
+	while(root->left != NULL)
+		root = root->left;
+	return root->data;
 }
 
 BTREE *add(BTREE *root, int min){
