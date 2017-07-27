@@ -40,7 +40,7 @@ BTREE *multi_insert(BTREE *myroot){
 	}
 	inorder(myroot);
 	return myroot;
-};
+}
 
 int count_leaves(BTREE *root){
 	if(root == NULL)
@@ -172,6 +172,29 @@ void postorder(BTREE *head){
 	printf("\n%d",head->data);
 }
 
+int find_min(BTREE *root){
+	if(root != NULL){
+		int min = root->data;
+		while(root != NULL){
+			if(root->data < min)
+				min = root->data;
+			root = root->left;
+		}
+		return min;
+	}
+	else
+		return -1000;
+}
+
+BTREE *add(BTREE *root, int min){
+	if(root != NULL){
+		root->data += min;
+		add(root->left, min);
+		add(root->right, min);
+	}
+	return root;
+}
+
 int main(){
 	BTREE *root = NULL;
 	int secim, data, key, x;
@@ -183,7 +206,7 @@ int main(){
 		printf("2 ==> Insert leaf\n3 ==> Insert multi leaves (while you enter '-1')\n");
 		printf("4 ==> Count leaves\n5 ==> Height of tree\n");
 		printf("6 ==> Depth of tree\n7 ==> Traverse\n8 ==> Search leaf in the tree\n");
-		printf("9 ==> Delete a leaf\n10==> Exit\n");
+		printf("9 ==> Delete a leaf\n10==> Add Minumum Data to the All Leaves\n11==> Exit\n");
 		printf("\n\nMake your choice : "); scanf("%d",&secim);
 		system("CLS");
 		
@@ -222,8 +245,15 @@ int main(){
 			case 9:
 				printf("Enter a data for delete : "); scanf("%d",&data);
 				root = delete_node(root,data);
-				break;		
+				break;
 			case 10:
+				x = find_min(root);
+				if(x != -1000){
+					add(root, x);
+					inorder(root);					
+				}
+				break;
+			case 11:
 				printf("EXIT !!");
 				return 0;
 			default:
