@@ -30,6 +30,30 @@ BTREE *insert(BTREE *root, int data){
 	return root;
 }
 
+void preorder(BTREE *head){
+	if(head == NULL)
+		return;
+	printf("\n%d",head->data);
+	preorder(head->left);
+	preorder(head->right);
+}
+
+void inorder(BTREE *head){
+	if(head == NULL)
+		return;
+	inorder(head->left);
+	printf("\n%d",head->data);
+	inorder(head->right);
+}
+
+void postorder(BTREE *head){
+	if(head == NULL)
+		return;
+	postorder(head->left);
+	postorder(head->right);
+	printf("\n%d",head->data);
+}
+
 BTREE *multi_insert(BTREE *myroot){
 	int i;
 	printf("Insert a node until you input'-*1'\n");
@@ -146,30 +170,6 @@ void print_tree(BTREE *head){
 			printf("Uncorrect entry !");
 			break;
 	}
-}
-
-void preorder(BTREE *head){
-	if(head == NULL)
-		return;
-	printf("\n%d",head->data);
-	preorder(head->left);
-	preorder(head->right);
-}
-
-void inorder(BTREE *head){
-	if(head == NULL)
-		return;
-	inorder(head->left);
-	printf("\n%d",head->data);
-	inorder(head->right);
-}
-
-void postorder(BTREE *head){
-	if(head == NULL)
-		return;
-	postorder(head->left);
-	postorder(head->right);
-	printf("\n%d",head->data);
 }
 
 int find_min(BTREE *root){
