@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 #define SIZE 25
-
 
 typedef struct{
 	int top;
@@ -74,46 +72,33 @@ char dequeue(queue *q){
 	}
 }
 
-void find_single(queue q, stack stk, char string[], int l){
-	int i;
+void find_palindrom(queue q, stack stk, char string[], int l){
+	int i, m = l/2;
 	
-	for(i=0; i<l; i++){
-		enqueue(&q,string[i]);		
-	}
-
-	for(i=(l-1); i<(l*2)-1; i++){
-		push(&stk,string[i]);		
-	}
+	if(l%2 == 1)
+		m++;
+		
+	for(i=0; i<m; i++)
+		enqueue(&q, string[i]);
 	
-	for(i=0; i<l; i++){
+	if(l%2 == 1)
+		m--;
+	
+	for(i=m; i<l; i++)
+		push(&stk, string[i]);
+		
+	if(l%2 == 0)
+		m--;
+	
+	for(i=0; i<m+1; i++){
 		if(dequeue(&q) != pop(&stk)){
 			printf("\n----- This string is not palindrome\n");
 			exit(1);			
 		}
 	}
-}
-
-void find_double(queue q,stack stk, char string[], int l){
-	int i;
-	
-	for(i=0; i<l; i++){
-		enqueue(&q,string[i]);		
-	}
-		
-	for(i=l; i<(l*2); i++){
-		push(&stk,string[i]);
-	}
-		
-	for(i=0; i<l; i++){
-		if(dequeue(&q) != pop(&stk)){
-			printf("\n----- This string is not palindrome\n");
-			exit(1);			
-		}
-	}	
 }
 
 int main(){
-	int i, l;
 	char string[50];
 	stack stk;
 	queue q;
@@ -121,14 +106,9 @@ int main(){
 	q_initialize(&q);
 	
 	printf("Enter your string : "); gets(string);
-	l = strlen(string);
+	int l = strlen(string);
 	
-	if(l%2 == 1){
-		find_single(q, stk, string, (l/2)+1);		
-	}
-	else{
-		find_double(q, stk, string, l/2);	
-	}
+	find_palindrom(q, stk, string, l);		
 
 	printf("\n+++++ This string is palindrome\n");
 	return 0;
