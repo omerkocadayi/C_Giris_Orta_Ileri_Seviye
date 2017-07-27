@@ -33,7 +33,7 @@ BTREE *insert(BTREE *root, int data){
 void preorder(BTREE *head){
 	if(head == NULL)
 		return;
-	printf("\n%d",head->data);
+	printf("%d\n",head->data);
 	preorder(head->left);
 	preorder(head->right);
 }
@@ -42,7 +42,7 @@ void inorder(BTREE *head){
 	if(head == NULL)
 		return;
 	inorder(head->left);
-	printf("\n%d",head->data);
+	printf("%d\n",head->data);
 	inorder(head->right);
 }
 
@@ -51,7 +51,7 @@ void postorder(BTREE *head){
 		return;
 	postorder(head->left);
 	postorder(head->right);
-	printf("\n%d",head->data);
+	printf("%d\n",head->data);
 }
 
 BTREE *multi_insert(BTREE *myroot){
@@ -173,17 +173,9 @@ void print_tree(BTREE *head){
 }
 
 int find_min(BTREE *root){
-	if(root != NULL){
-		int min = root->data;
-		while(root != NULL){
-			if(root->data < min)
-				min = root->data;
-			root = root->left;
-		}
-		return min;
-	}
-	else
-		return -1000;
+	while(root->left != NULL)
+		root = root->left;
+	return root->data;
 }
 
 BTREE *add(BTREE *root, int min){
@@ -247,11 +239,8 @@ int main(){
 				root = delete_node(root,data);
 				break;
 			case 10:
-				x = find_min(root);
-				if(x != -1000){
-					add(root, x);
-					inorder(root);					
-				}
+				add(root, find_min(root));
+				inorder(root);					
 				break;
 			case 11:
 				printf("EXIT !!");
