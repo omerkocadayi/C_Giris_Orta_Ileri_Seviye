@@ -66,10 +66,10 @@ BTREE *multi_insert(BTREE *myroot){
 	return myroot;
 }
 
-int count_leaves(BTREE *root){
+int count_nodes(BTREE *root){
 	if(root == NULL)
 		return 0;
-	return 1 + count_leaves(root->left) + count_leaves(root->right);
+	return 1 + count_nodes(root->left) + count_nodes(root->right);
 }
 
 int height(BTREE *root){
@@ -194,11 +194,11 @@ int main(){
 	while(1){
 		printf("Press Any Key For Continue !!"); getch();
 		system("CLS");
-		printf("1 ==> New leaf\n");
-		printf("2 ==> Insert leaf\n3 ==> Insert multi leaves (while you enter '-1')\n");
-		printf("4 ==> Count leaves\n5 ==> Height of tree\n");
-		printf("6 ==> Depth of tree\n7 ==> Traverse\n8 ==> Search leaf in the tree\n");
-		printf("9 ==> Delete a leaf\n10==> Add Minumum Data to the All Leaves\n11==> Exit\n");
+		printf("1 ==> New node\n");
+		printf("2 ==> Insert nodes\n3 ==> Insert multi nodes (while you enter '-1')\n");
+		printf("4 ==> Count nodes\n5 ==> Height of tree\n");
+		printf("6 ==> Depth of tree\n7 ==> Traverse\n8 ==> Search nodes in the tree\n");
+		printf("9 ==> Delete a node\n10==> Add Minumum Data to the All nodes\n11==> Exit\n");
 		printf("\n\nMake your choice : "); scanf("%d",&secim);
 		system("CLS");
 		
@@ -215,7 +215,7 @@ int main(){
 				root = multi_insert(root);
 				break;
 			case 4:
-				printf("There is/are %d nodes in a tree", count_leaves(root));
+				printf("There is/are %d nodes in a tree", count_nodes(root));
 				break;
 			case 5:
 				printf("Tree's height : %d", height(root));
@@ -230,9 +230,9 @@ int main(){
 				printf("Enter a data for search : "); scanf("%d",&key);
 				x = search(root,key);
 				if(x == 1)
-					printf("\nLeaf is found !!\nLeaf's data : %d",root->data);
+					printf("\nNode is found !!\nNode's data : %d",root->data);
 				else
-					printf("\nLeaf is not found !!\n",root->data);					
+					printf("\nNode is not found !!\n",root->data);					
 				break;
 			case 9:
 				printf("Enter a data for delete : "); scanf("%d",&data);
