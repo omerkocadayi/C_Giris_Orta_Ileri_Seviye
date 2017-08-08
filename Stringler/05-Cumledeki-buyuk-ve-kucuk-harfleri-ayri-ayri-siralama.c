@@ -6,18 +6,15 @@ int main(){
 	printf("Cumlenizi giriniz : "); gets(cumle);
 	
 	for(int i=0;i<=strlen(cumle);i++){
-                if(cumle[i]>=65 && cumle[i]<=90){
+                if(cumle[i]>=65 && cumle[i]<=90)
 		        printf("%c",cumle[i]);
-		}
 	}
 
 	printf("\n\n");
 	
 	for(int i=0;i<=strlen(cumle);i++){
-		if(cumle[i]>=97 && cumle[i]<=122){
+		if(cumle[i]>=97 && cumle[i]<=122)
 		        printf("%c",cumle[i]);
-		}
 	}
-	
 	return 0;
 }
