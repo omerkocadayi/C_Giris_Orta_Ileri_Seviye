@@ -16,31 +16,25 @@ int bul_kare_top(int);
 int bul_top_kare(int);
 
 int main(){
-	int kareler_toplami , toplamlar_karesi;
-	int x,sonuc;
+	int kareler_toplami , toplamlar_karesi, x;
 	
 	printf("' P(x) - F(x) ' isleminde x'in hangi degeri icin sonucu bulmak istersin : "); scanf("%d",&x);
 	
-		
 	toplamlar_karesi= bul_top_kare(x);    // p(x)
 	printf("\nToplamlarin karesi : %d",toplamlar_karesi);
 	
 	kareler_toplami= bul_kare_top(x);    // f(x)
 	printf("\nKarelerin toplami : %d",kareler_toplami);
 
-	
-	sonuc= toplamlar_karesi - kareler_toplami;    // p(x) - f(x)
-
-	printf("\nP(%d) - F(%d) = %d",x,x,sonuc);
+	printf("\nP(%d) - F(%d) = %d",x,x,toplamlar_karesi - kareler_toplami);
 	return 0;
 }
 
 int bul_kare_top(int x){
 	int sonuc=0;
 	
-	for(int i=0;i<(x+1);i++){
+	for(int i=0;i<(x+1);i++)
 		sonuc+=i*i;
-	}
 	
 	return sonuc;
 }
@@ -49,5 +43,5 @@ int bul_top_kare(int x){
 	int sonuc=0;
 	sonuc= (x*(x+1))/2;      //  (x*(x+1))/2  ===> 0'dan  x'e kadar olan tamsayıların toplam formülü
    
-   return sonuc*sonuc;
+   	return sonuc*sonuc;
 }
