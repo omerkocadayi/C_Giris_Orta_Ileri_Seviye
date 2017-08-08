@@ -12,9 +12,8 @@ int main(){
 	printf("diziniz kac elemanli olacak : "); scanf("%d",&n);
 	ptr=(int *)calloc(n,sizeof(int));
 	
-	for(int i=0;i<n;i++){
+	for(int i=0;i<n;i++)
 		printf("Dizinizin %d. elemanini giriniz : ",i+1); scanf("%d",ptr+i);
-	}
 	
 	printf("Dizinin en buyuk degeri : %d",buyuk_bul(ptr,n));
 	
@@ -25,9 +24,8 @@ int main(){
 int buyuk_bul(int *p,int boyut){
 	int max=*p;
 	for(int i=0;i<boyut;i++){
-		if(*(p+i)>max){
+		if(*(p+i)>max)
 			max=*(p+i);
-		}
 	}
 	return max;
 }
