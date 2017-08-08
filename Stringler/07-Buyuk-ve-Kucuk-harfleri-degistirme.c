@@ -7,12 +7,10 @@ int main(){
 	printf("Cumlenizi giriniz : "); gets(cumle);
 
 	for(int i=0;i<=strlen(cumle);i++){
-		if(cumle[i]>=65 && cumle[i]<=90){
+		if(cumle[i]>=65 && cumle[i]<=90)
 			cumle[i]+=32;
-		}
-		else if(cumle[i]>=97 && cumle[i]<=122){
+		else if(cumle[i]>=97 && cumle[i]<=122)
 			cumle[i]-=32;
-		}
 	}
 	
 	printf("\nYeni Cumleniz : %s",cumle);
