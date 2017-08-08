@@ -25,9 +25,8 @@ int main(){
 float varyans_hesabi(int *ptr,float ort){
 	float tplm=0,vryns;
 	
-	for(int i=0;i<15;i++){
+	for(int i=0;i<15;i++)
 		tplm+=(ort-(*(ptr+i)))*(ort-(*(ptr+i)));
-	}
 	
 	vryns=tplm/15;
 	return vryns;
