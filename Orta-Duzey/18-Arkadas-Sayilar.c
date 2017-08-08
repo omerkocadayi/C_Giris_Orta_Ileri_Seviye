@@ -18,9 +18,8 @@ int main(){
 	
 	for(a=2;a<MAX;a++){
 		b = carpimlar_toplami(&a);
-		if(b<a && carpimlar_toplami(&b)==a){    // b<a ifadesini tekrarlara dusmemek icin yazdik..
+		if(b<a && carpimlar_toplami(&b)==a)	// b<a ifadesini tekrarlara dusmemek icin yazdik..
   			printf("Bu cift arkadas sayilardir : %6d    %10d \n",a,b);	
-		}
 	}
 	return 0;
 	
@@ -30,9 +29,8 @@ int carpimlar_toplami(int *x){
 	int i,result=1;
 	
 	for(i=2;i<=*x/2;i++){
-		if(*x%i==0){
+		if(*x%i==0)
 			result+=i;
-		}
 	}	
 	return result;
 }
