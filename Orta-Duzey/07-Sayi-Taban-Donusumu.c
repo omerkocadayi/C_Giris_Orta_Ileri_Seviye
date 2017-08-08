@@ -72,7 +72,6 @@ void sekizlik_taban(unsigned x){
 	}
 	printf("\n\n\t* Sayinizin 8'lik tabanda karsiligi  :  ");
 	
-	for(k=i+1;k>0;k--){
+	for(k=i+1;k>0;k--)
 		printf("%d",*(p+k));
-	}
 }
