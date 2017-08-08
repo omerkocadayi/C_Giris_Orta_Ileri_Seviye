@@ -10,13 +10,11 @@ int main(){
 	printf("Kenarlari giriniz :"); scanf("%d%d",&a,&b);
 	printf("islem sec (alan=1 , cevre=2) : "); scanf("%d",&secim);
 	
-	if(secim==1){
+	if(secim==1)
 		p=alan;
-	}
 	
-	else if(secim==2){
+	else if(secim==2)
 		p=cevre;
-	}
 	
 	else {
 		printf("HATALI GIRIS YAPTINIZ !!!!");
