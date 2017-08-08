@@ -14,11 +14,9 @@ int main(){
 	printf("Kaca kadar olan mukemmel sayilari gormek istiyorsun : "); scanf("%d",&sayi);
 	
 	for(i=1;i<=sayi;i++){
-		
 		for(j=1;j<i;j++){
-			if(i%j==0){
+			if(i%j==0)
 				toplam+=j;
-			}
 		
 			if(toplam==i){
 				printf("\n%d. Mukemmel Sayi : %d",sayac,i);
@@ -28,7 +26,6 @@ int main(){
 			}
 		}
 		toplam=0;
-		
 	}
 	
 	printf("\nToplamlari : %d",mukemmel_toplam);
