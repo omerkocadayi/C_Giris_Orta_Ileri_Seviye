@@ -10,7 +10,7 @@ int main(){
 	char *p_cumle;
 	int *p_harf;
 	
-  p_cumle=cumle;
+	p_cumle=cumle;
 	p_harf=harf_sayisi;
 	
 	printf("Cumlenizi giriniz : "); gets(cumle);
@@ -21,11 +21,8 @@ int main(){
 	}
 	
 	for(int i=0;i<255;i++){
-	
-  if(*(p_harf+i)>0 && i!=32){
+  		if(*(p_harf+i)>0 && i!=32)
 			printf("\n %c   karakterinden %d tane var",i,*(p_harf+i));
-		}
 	}
-	
-  return 0;
+  	return 0;
 }
