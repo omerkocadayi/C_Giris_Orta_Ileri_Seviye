@@ -13,13 +13,10 @@ int main(){
 	ptr_kelime=kelime;
 	
 	for(int i=0;i<3;i++){
-		
 		for(int j=0;j<3;j++){
 			printf(" %c |",dizi[i][j]);
-			
-			if(j==2){
+			if(j==2)
 				printf("\n------------\n");
-			}
 		}
 	}
 	
@@ -27,11 +24,8 @@ int main(){
 	uzunluk=strlen(kelime);
 	
 	for(int i=0;i<uzunluk;i++){
-		
 		for(int j=0;j<3;j++){
-		
 			for(int k=0;k<3;k++){
-			
 				if (*(ptr_kelime+i)==dizi[j][k]){
 					sifre[a]=((j+1)*10)+k+1;
 					a++;
@@ -43,10 +37,8 @@ int main(){
 	printf("\n\nSifrenizin sifrelenmis hali :");
 	
 	for(int i=0;i<20;i++){
-		if(*(ptr_sifre+i)==0){
+		if(*(ptr_sifre+i)==0)
 			break;
-		}
-		
 		printf("%d ",*(ptr_sifre+i));	
 	}
 	
