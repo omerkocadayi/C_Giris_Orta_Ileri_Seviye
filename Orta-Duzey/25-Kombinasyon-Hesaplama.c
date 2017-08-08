@@ -8,13 +8,11 @@ int main(){
 	printf("n : "); scanf("%d",&n);
 	printf("r : "); scanf("%d",&r);
 	
-	for(i=n; i>=(n-r+1); i--){
+	for(i=n; i>=(n-r+1); i--)
 		x *= i;
-	}
 	
-	for(i=1; i<=r; i++){
+	for(i=1; i<=r; i++)
 		y *= i;
-	}
 		
 	printf("\nC(%d,%d) -> Sonuc :  =  %d",n,r,x/y);
 	return 0;
