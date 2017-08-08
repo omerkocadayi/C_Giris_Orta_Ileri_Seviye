@@ -31,21 +31,17 @@ int tersini_al(int sayi){
 	      		toplam=((toplam*10)+gecici);
 	      		sayi=sayi/10;			
 		}
-		
 		else
 	    		break;		
 	}
-	
 	return toplam;
 }
 
 int asal_mi(int sayi){
 	int gecici=0;
-	
 	for(int i=2;i<=sayi/2;i++){
-		if(sayi%i == 0){
+		if(sayi%i == 0)
 			return gecici;
-		}
 	}
 	return sayi;
 }
