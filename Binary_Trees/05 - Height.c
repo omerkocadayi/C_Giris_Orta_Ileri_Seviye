@@ -1,7 +1,7 @@
 int height(BTREE *root){
 	if(root == NULL)
 		return -1;
-	int l_height, r_height;
+	int l_height=0, r_height=0;
 	l_height = height(root->left);
 	r_height = height(root->right);
 	
