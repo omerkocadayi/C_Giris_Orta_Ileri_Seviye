@@ -1,7 +1,7 @@
 int depth(BTREE *root){
 	if(root == NULL)
 		return 0;
-	int l_depth, r_depth;
+	int l_depth=0, r_depth=0;
 	l_depth = depth(root->left);
 	r_depth = depth(root->right);
 	
