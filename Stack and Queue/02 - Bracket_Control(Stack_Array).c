@@ -40,8 +40,8 @@ void print_error(){
 int main(){
 	char key;
 	stack stk;
-    initialization(&stk);
-    FILE *fptr;
+	initialization(&stk);
+	FILE *fptr;
  
 	if( (fptr = fopen("02 - kontrol.txt","r")) == NULL){
     	printf("Boyle bir dosya yok\n");
