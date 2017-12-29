@@ -50,55 +50,52 @@ int main(){
     else{
 		while ( !feof(fptr) ){
 			key = getc(fptr);
+			switch(key){
+				case '(':
+					push(&stk,key);
+					break;
  
-        	switch(key){
-            	case '(':
-                	push(&stk,key);
-                	break;
- 
-                case ')':
-                	if(pop(&stk) == '('){
-                		printf("Pop -- %c\n\n",key);
-                		continue;
+				case ')':
+					if(pop(&stk) == '('){
+						printf("Pop -- %c\n\n",key);
+						continue;
 					}
-                    else
+					else
 						print_error();
-                	break;
+					break;
  
-            	case '{':
-                	push(&stk,key);
-                	break;
+				case '{':
+					push(&stk,key);
+					break;
  
-                case '}':
-                	if(pop(&stk) == '{'){
-                		printf("Pop -- %c\n\n",key);
-                		continue;
+				case '}':
+					if(pop(&stk) == '{'){
+						printf("Pop -- %c\n\n",key);
+						continue;
 					}	
-                    else
-                        print_error();
-                	break;
+					else
+						print_error();
+					break;
  
-            	case '[':
-                	push(&stk,key);
-                	break;
+				case '[':
+					push(&stk,key);
+					break;
  
-            	case ']':
-                	if(pop(&stk) == '['){
-                		printf("Pop -- %c\n\n",key);
-                		continue;                		
+				case ']':
+					if(pop(&stk) == '['){
+						printf("Pop -- %c\n\n",key);
+						continue;                		
 					}
-                    else
-                        print_error();
-                	break;
-            }
-        }
-    }
- 
-    if(stk.top==-1)
+					else
+						print_error();
+					break;
+			}
+		}
+	}
+	if(stk.top==-1)
 		printf("\n\nHatali Parantez Kullanimi Yok !!");
- 
 	else
-    	printf("\n\nHatali Parantez Kullanimi Yaptiniz !!!\n\n");
+		printf("\n\nHatali Parantez Kullanimi Yaptiniz !!!\n\n");
  
 	fclose(fptr);
 	return 0;
