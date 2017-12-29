@@ -4,7 +4,7 @@
 #define STACK_SIZE 20
  
 typedef struct{
-    char top;
+	char top;
     char data[STACK_SIZE];
 }stack;
  
@@ -17,24 +17,24 @@ void push(stack *stk,char c){
         printf("Stack is full\n");
      	return;
     }
-	stk->top++;
-	stk->data[stk->top] = c;
-	printf("Push -- %c\n\n",c);
+    stk->top++;
+    stk->data[stk->top] = c;
+    printf("Push -- %c\n\n",c);
 }
  
 char pop(stack *stk){
-	if(stk->top == -1){
+    if(stk->top == -1){
     	printf("Stack is empty\n");
-	}
+    }
  
     char c = stk->data[stk->top];
-	stk->top--;
-	return c;
+    stk->top--;
+    return c;
 }
 
 void print_error(){
-	printf("\n\nHatali Parantez Kullanimi Yaptiniz !!!\n\n");
-	exit(1);
+     printf("\n\nHatali Parantez Kullanimi Yaptiniz !!!\n\n");
+     exit(1);
 }
 
 int main(){
